@@ -38,7 +38,7 @@ else()
 endif(USE_MPI)
 
 if(USE_OPENMP)
-    find_package(OpenMP REQUIRED)
+    find_package(OpenMP)
     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
 else()
     # Ignore unknown #pragma warning
